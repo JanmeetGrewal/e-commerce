@@ -44,25 +44,47 @@ router.get("/", function(req, res){
 
 });
 
-router.get("/product/:productName", function(req, res){
+// router.get("/product/:productName", function(req, res){
+//
+//   const requestedName = _.lowerCase(req.params.productName);
+//
+//   Product.find({}, function(err, products){
+//     if (err) {
+//       console.log("Error connecting to db in the index.ejs");
+//     }
+//     else {
+//       products.forEach(function(product){
+//         const storedName = _.lowerCase(product.name);
+//         if(storedName === requestedName){
+//         res.render("product.ejs", {image: product.imagePath, name: product.name, description: product.description});
+//       }
+//     });
+//
+//     }
+//   });
+// });
 
-  const requestedName = _.lowerCase(req.params.productName);
+router.get("/product/:id", function(req, res){
 
-  Product.find({}, function(err, products){
+  Product.findById(req.params.id, function(err, product){
     if (err) {
       console.log("Error connecting to db in the index.ejs");
     }
     else {
-      products.forEach(function(product){
-        const storedName = _.lowerCase(product.name);
-        if(storedName === requestedName){
-        res.render("product.ejs", {name: product.name, description: product.description});
-      }
-    });
-
+        res.render("product.ejs", {image: product.imagePath, name: product.name, description: product.description});
     }
   });
 });
+
+// router.get("/jazz",function(req,res){
+//   res.send("Jazz is great");
+// });
+//
+router.get("/products/add",function(req,res){
+  res.render("addProduct.ejs");
+
+});
+
 
 
 

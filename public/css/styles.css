@@ -16,3 +16,13 @@
 .nav-item {
   padding: 0 18px;
 }
+
+.productDescription {
+  margin: 5rem;
+}
+
+.product-image {
+  width: 40%;
+  margin-right: 2rem;
+  margin-bottom: 2rem
+}

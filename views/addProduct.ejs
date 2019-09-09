@@ -1,0 +1,54 @@
+<% include ./partials/header.ejs%>
+<link rel="stylesheet" href="/stylesheets/main.css">
+<title>Jazz ECommerce</title>
+</head>
+
+<% include ./partials/navbar.ejs%>
+
+<section id="newProduct-welcome">
+    <div class="container-fluid">
+        <div class="row p-4">
+            <div class="col-md-12 text-center">
+                <div class="display-3">Add A New Product!</div>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <div class="col-md-6 display-4 text-center my-auto"> Product Details </div>
+            <div class="col-md-6">
+                    <form method="post" action="/products/add">
+                            <div class="form-group">
+                              <label for="productName">Name</label>
+                              <input type="text" class="form-control" id="productName"  placeholder="Enter Name of the product" name="product[name]">
+                            </div>
+                            <div class="form-group">
+                              <label for="productImage">Image URL</label>
+                              <input type="text" class="form-control" id="productImage" placeholder="Image URL" name="product[imagePath]">
+                            </div>
+                            <div class="form-group">
+                                    <label for="productPrice">Price</label>
+                                    <input type="text" class="form-control" id="productPrice" placeholder="Price in CAD" name="product[price]">
+                            </div>
+                            <div class="form-group">
+                                    <label for="productDescription">Description</label>
+                                    <input type="text" class="form-control" id="productDescription" placeholder="Something about the product" name="product[description]">
+                            </div>
+                            <div class="form-group">
+                                    <label for="productType">Example select</label>
+                                    <select class="form-control" id="productType" name="product[category]">
+                                      <option>Clothes</option>
+                                      <option>Shoes</option>
+                                      <option>Electronics</option>
+                                    </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                     </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<% include ./partials/footer.ejs %>

@@ -50,7 +50,7 @@
           <% var product=products[i]%>
           <img src="<%= product.imagePath%>" class="img-thumbnail mx-auto" style="height:15rem">
           <div class="card-body">
-            <h6 class="text-center"><a href="/product/<%=product.name%>"><%= product.name%></a></h4>
+            <h6 class="text-center"><a href="/product/<%=product._id%>"><%= product.name%></a></h6>
             <p class="text-center">$<%= product.price%></p>
             <div class="mx-auto">
               <a href="" class="btn btn-outline-dark btn-block">Add to Cart</a>
