@@ -4,10 +4,12 @@ const express = require("express");
 const router = express.Router();
 const bodyParser = require("body-parser");
 const _ = require("lodash");
+// const ejs = require("ejs");
+//
+// router.set('view engine', 'ejs');
 
 var Product=require("../models/products");
 var CarouselElement=require("../models/carouselElements");
-
 
 router.use(bodyParser.urlencoded({extended: true}));
 router.use(express.static("public"));
@@ -75,17 +77,5 @@ router.get("/product/:id", function(req, res){
     }
   });
 });
-
-// router.get("/jazz",function(req,res){
-//   res.send("Jazz is great");
-// });
-//
-router.get("/products/add",function(req,res){
-  res.render("addProduct.ejs");
-
-});
-
-
-
 
 module.exports = router;

@@ -1,6 +1,7 @@
-<% include ./partials/header.ejs%>
-<link rel="stylesheet" href="/stylesheets/main.css">
-<title>Jazz ECommerce</title>
+<%- include("partials/header") -%>
+
+<link rel="stylesheet" href="/css/styles.css">
+<title>Add New Product</title>
 </head>
 
 <% include ./partials/navbar.ejs%>
@@ -15,26 +16,30 @@
         <div class="row pt-4">
             <div class="col-md-6 display-4 text-center my-auto"> Product Details </div>
             <div class="col-md-6">
-                    <form method="post" action="/products/add">
+                    <form method="post" action="/admin/product/add">
                             <div class="form-group">
                               <label for="productName">Name</label>
-                              <input type="text" class="form-control" id="productName"  placeholder="Enter Name of the product" name="product[name]">
+                              <input type="text" class="form-control" id="productName"  placeholder="Enter Name of the product" name="name">
+                            </div>
+                            <div class="form-group">
+                              <label for="productBrand">Brand</label>
+                              <input type="text" class="form-control" id="productBrand"  placeholder="Enter Brand of the product" name="brand">
                             </div>
                             <div class="form-group">
                               <label for="productImage">Image URL</label>
-                              <input type="text" class="form-control" id="productImage" placeholder="Image URL" name="product[imagePath]">
+                              <input type="text" class="form-control" id="productImage" placeholder="Image URL" name="imageURL">
                             </div>
                             <div class="form-group">
                                     <label for="productPrice">Price</label>
-                                    <input type="text" class="form-control" id="productPrice" placeholder="Price in CAD" name="product[price]">
+                                    <input type="text" class="form-control" id="productPrice" placeholder="Price in CAD" name="price">
                             </div>
                             <div class="form-group">
                                     <label for="productDescription">Description</label>
-                                    <input type="text" class="form-control" id="productDescription" placeholder="Something about the product" name="product[description]">
+                                    <input type="text" class="form-control" id="productDescription" placeholder="Something about the product" name="description">
                             </div>
                             <div class="form-group">
-                                    <label for="productType">Example select</label>
-                                    <select class="form-control" id="productType" name="product[category]">
+                                    <label for="productType">Category</label>
+                                    <select class="form-control" id="productType" name="category">
                                       <option>Clothes</option>
                                       <option>Shoes</option>
                                       <option>Electronics</option>
@@ -51,4 +56,4 @@
 
 
 
-<% include ./partials/footer.ejs %>
+<%- include("partials/footer") -%>
