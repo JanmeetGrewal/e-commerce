@@ -1,8 +1,47 @@
+.bottom-container {
+  text-align: center;
+  background-color: #66BFBF;
+  margin-top: 90px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 0;
+}
+
+.bottom-container a{
+  color: white;
+  text-decoration: none;
+
+}
+
+.bottom-container p {
+  margin-bottom: 0;
+  padding-top: 20px;
+
+}
+
 .carouselImage {
   width: 100%;
   height: 500px;
 
 }
+
+.categoryProducts {
+  margin-top: 5rem;
+}
+
+.container {
+
+}
+
+.fa-twitter {
+  margin-right: 40px;
+}
+
+.fa-facebook-f {
+  margin-right: 40px;
+}
+
+
 
 .navbar {
   padding: 0.5rem 4.5rem 0.5rem;
@@ -17,6 +56,12 @@
   padding: 0 18px;
 }
 
+.newProductForm {
+  padding-left: 5rem;
+  padding-right: 5rem;
+
+}
+
 .productDescription {
   margin: 5rem;
 }
@@ -25,4 +70,10 @@
   width: 40%;
   margin-right: 2rem;
   margin-bottom: 2rem
+}
+
+.removeProductForm {
+  padding-left: 5rem;
+  padding-right: 5rem;
+
 }

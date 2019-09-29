@@ -1,0 +1,35 @@
+<%- include("partials/header") -%>
+
+<link rel="stylesheet" href="/css/styles.css">
+<title>Add New Product</title>
+</head>
+
+<% include ./partials/navbar.ejs%>
+
+<section id="newProduct-welcome">
+    <div class="container-fluid">
+        <div class="row p-4">
+            <div class="col-md-12 text-center">
+                <div class="display-3">Remove a Product</div>
+            </div>
+        </div>
+        <div class="row pt-4">
+            <!-- <div class="col-md-6 display-4 text-center my-auto"> Product Details </div> -->
+            <div class="col-md-12 container removeProductForm">
+                    <form method="post" action="/admin/product/remove">
+                            <div class="form-group">
+                              <label for="productId">ID</label>
+                              <input type="text" class="form-control" id="productId"  placeholder="Enter ID of the product" name="id">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                     </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<%- include("partials/footer") -%>

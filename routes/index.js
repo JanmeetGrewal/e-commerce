@@ -16,6 +16,7 @@ router.use(express.static("public"));
 
 router.get("/", function(req, res){
 
+//Setup Slider and Product cards
   CarouselElement.find({}, function(err, carouselElements){
     if (err) {
       console.log("Error connecting to db in the index.ejs");

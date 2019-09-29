@@ -11,6 +11,7 @@ mongoose.connect("mongodb://localhost:27017/shopDB", {useNewUrlParser: true});
 //Require routes
 var index = require('./routes/index');
 var product = require('./routes/product');
+var category = require('./routes/category');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.use(express.static("public"));
 //Set up routes
 app.use("/", index);
 app.use("/", product);
+app.use("/", category);
 
 
 app.listen(3000, function() {

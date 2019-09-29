@@ -10,13 +10,17 @@
     <div class="container-fluid">
         <div class="row p-4">
             <div class="col-md-12 text-center">
-                <div class="display-3">Add a New Product</div>
+                <div class="display-3">Update the Product!</div>
             </div>
         </div>
         <div class="row pt-4">
             <!-- <div class="col-md-6 display-4 text-center my-auto"> Product Details </div> -->
-            <div class="col-md-12 container newProductForm">
+            <div class="col-md-12 container">
                     <form method="post" action="/admin/product/add">
+                      <div class="form-group">
+                        <label for="productId">ID</label>
+                        <input type="text" class="form-control" id="productId"  placeholder="Enter ID of the product" name="id">
+                      </div><hr>
                             <div class="form-group">
                               <label for="productName">Name</label>
                               <input type="text" class="form-control" id="productName"  placeholder="Enter Name of the product" name="name">
@@ -42,7 +46,7 @@
                                     <select class="form-control" id="productType" name="category">
                                       <option>Clothes</option>
                                       <option>Shoes</option>
-                                      <option>Accessories</option>
+                                      <option>Electronics</option>
                                     </select>
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
