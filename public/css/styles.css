@@ -41,7 +41,10 @@
   margin-right: 40px;
 }
 
+footer {
+  bottom: 0;
 
+}
 
 .navbar {
   padding: 0.5rem 4.5rem 0.5rem;
@@ -64,12 +67,18 @@
 
 .productDescription {
   margin: 5rem;
+  height: 30rem;
+}
+
+.product-text {
+
 }
 
 .product-image {
   width: 40%;
   margin-right: 2rem;
-  margin-bottom: 2rem
+  margin-bottom: 2rem;
+  height: 25rem;
 }
 
 .removeProductForm {
