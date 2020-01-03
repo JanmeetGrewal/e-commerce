@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/shopDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin-janmeet:Janmeet46@cluster0-gg9zf.mongodb.net/shopDB", {useNewUrlParser: true});
 
 //Require routes
 var index = require('./routes/index');
